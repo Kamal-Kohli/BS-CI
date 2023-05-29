@@ -43,7 +43,7 @@ for _ in range(NUM_SHIPS):
     ships.append([ship_row, ship_col])
 
 # Function to print the game board
-def print_board():
+def print_grid():
     print("   " + " ".join(str(i) for i in range(GRID_SIZE)))
     print("   " + "---" * GRID_SIZE)
     for row in range(GRID_SIZE):
