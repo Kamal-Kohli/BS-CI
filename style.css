@@ -23,3 +23,14 @@ h1 {
     border: 1px solid #333;
     padding: 10px;
 }
+
+#buttons {
+    margin-top: 20px;
+}
+
+button {
+    color: #333;
+    background-color: goldenrod;
+    padding: 10px 20px;
+    margin-right: 10px;
+}
