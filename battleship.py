@@ -1,4 +1,6 @@
 import random
+from flask import Flask, render_template, request, redirect
+
 """
 Legend:
 1. "+" = Water or empty space.
