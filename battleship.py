@@ -1,5 +1,5 @@
-import random
-from flask import Flask, render_template, request, redirect
+from random import randint
+import time
 
 """
 Legend:
@@ -20,8 +20,6 @@ F. You can choose a row and column such as A:3, B:5 to indicate where to shoot.
 # Global constants
 # Global variable for grid
 GRID = [[]]
-#Global variable for grd size
-GRID_SIZE = 10
 #Global variable of number of ships to place
 NUM_SHIPS = 5
 #Global variable for bullets left
@@ -33,21 +31,27 @@ NUM_OF_SHIPS_SUNK = 0
 #Gloabal varibale for ship positions
 SHIP_POSITIONS = [[]]
 
+#Constants and globals
+OCEAN = "."
+FIRE = "X"
+HIT = "*"
+GRID_SIZE = 10
+SHIPS = [5, 4, 3, 3, 2]
 
-# Create the game board
-myBoard = [[' ' for _ in range(GRID_SIZE)] for _ in range(GRID_SIZE)]
+#globals
+orientation = -1 # Stores the hit ship orientation. Determined on second hit
+total_hits = [] # Stores the ship number every time AI hits a ship while ship is afloat
+miss = 1 # Stores whether last AI shot was a miss
 
-# Create the ships
-ships = []
-for _ in range(NUM_SHIPS):
-    ship_row = random.randint(0, GRID_SIZE - 1)
-    ship_col = random.randint(0, GRID_SIZE - 1)
-    ships.append([ship_row, ship_col])
+# Player variables
+player_alive = 17 # -1 every time a ship is hit
+player_radar = []
+player_board = []
 
-# Function to print the game board
-def print_grid():
-    print("   " + " ".join(str(i) for i in range(GRID_SIZE)))
-    print("   " + "---" * GRID_SIZE)
-    for row in range(GRID_SIZE):
-        print(f"{row} | {' | '.join(grid[row])} |")
-        print("   " + "---" * GRID_SIZE)
+# CPU variables
+cpu_alive = 17
+cpu_radar = []
+cpu_board = []
+ship_position = [] 
+ship_length = [] 
+
