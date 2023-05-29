@@ -1,0 +1,11 @@
+body {
+    font-family: monospace;
+    text-align: center;
+    background: darkgrey;
+}
+
+h1 {
+    color: tomato;
+    font-size: 75px;
+}
+
