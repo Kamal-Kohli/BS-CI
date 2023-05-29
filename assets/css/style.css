@@ -28,7 +28,8 @@ h1 {
 #game-board {
     font-size: 16px;
     line-height: 1.5;
-    border: 1px solid #333;
+    border: 3px solid goldenrod;
+    background: black;
     padding: 10px;
     margin: 0 auto;
     width: 600px;
