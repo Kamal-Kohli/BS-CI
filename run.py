@@ -12,26 +12,28 @@ A. grid = 10x10
 B. Player will have 50 bullets to take down ships.
 C. 5 ships of variable length randomly placed.
 D. Every hit and misses shot will be show up in the grid.
-E. If all ships are unearthed before using up all bullets, You Win else, You Lose.
+E. If all ships are unearthed before using up all bullets, 
+    You Win else, You lose.
 F. You can choose a row and column such as A1, B1 to indicate where to shoot.
 """
 
-#Constants and globals
+# Constants and globals
 EMPTY = '.'
 SHIP = 'S'
 HIT = 'X'
 MISS = 'O'
-GRID_SIZE = 10 # Numbr of ships each grid
-SHIPS = [5, 4, 3, 3, 2] # Variation sizes of ships
+GRID_SIZE = 10  # Numbr of ships each grid
+SHIPS = [5, 4, 3, 3, 2]  # Variation sizes of ships
 NUM_SHIPS = len(SHIPS)
 
-# Function to create an empty grid
-class Grid:
+
+class Grid:  # Function to create an empty grid
     def __init__(self):
         self.grid = [[EMPTY] * GRID_SIZE for _ in range(GRID_SIZE)]
         self.ships = []
         
     # Function to randomly place ships on the grid
+
     def place_ships(self):
         for size in SHIPS:
             ship_placed = False
@@ -44,6 +46,7 @@ class Grid:
                     self.add_ship(row, col, size, direction)
                     ship_placed = True
     # Function to place ship to grid
+
     def can_place_ship(self, row, col, size, direction):
         if direction == 'horizontal':
             if col + size > GRID_SIZE:
@@ -62,6 +65,7 @@ class Grid:
 
         return True
     # Function to add ships on the grid
+
     def add_ship(self, row, col, size, direction):
         if direction == 'horizontal':
             for c in range(col, col + size):
@@ -72,6 +76,7 @@ class Grid:
 
         self.ships.append((row, col, size, direction))
     # Function to Print/Dispaly the grid to Board
+
     def print_grid(self, hide_ships=True):
         print('   ', end='')
         for i in range(GRID_SIZE):
@@ -87,6 +92,7 @@ class Grid:
                     print(cell, end=' ')
             print()
     # Function to validate move
+
     def is_valid_move(self, row, col):
         if row < 0 or row >= GRID_SIZE or col < 0 or col >= GRID_SIZE:
             return False
@@ -105,8 +111,8 @@ class Grid:
         else:
             self.grid[row][col] = MISS
             return False
-    # Function to hit ship display sunk 
-    def check_ship_sunk(self, row, col):
+    
+    def check_ship_sunk(self, row, col):  # Function to hit ship display sunk 
         for ship in self.ships:
             r, c, size, direction = ship
 
@@ -133,13 +139,17 @@ class Grid:
                     self.grid[r + i][col] = HIT
             print('Ship Sunk!')
 # Function to example to how to choose row & col, indicate shoot area
-def get_move_from_input():
+
+
+def get_move_from_input():  
     move = input('Enter your move (e.g., A5): ')
     col = ord(move[0].upper()) - ord('A')
     row = int(move[1:]) - 1
     return row, col
-# Function to start game
-def play_game():
+
+
+def play_game():  # Function to start game
+
     player_grid = Grid()
     cpu_grid = Grid()
 
@@ -184,5 +194,6 @@ def play_game():
                 break
 
         player_turn = not player_turn
+
 
 play_game()
