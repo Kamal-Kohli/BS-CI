@@ -43,5 +43,23 @@ class Grid:
                 if self.can_place_ship(row, col, size, direction):
                     self.add_ship(row, col, size, direction)
                     ship_placed = True
+
+    def can_place_ship(self, row, col, size, direction):
+        if direction == 'horizontal':
+            if col + size > GRID_SIZE:
+                return False
+
+            for c in range(col, col + size):
+                if self.grid[row][c] == SHIP:
+                    return False
+        else:
+            if row + size > GRID_SIZE:
+                return False
+
+            for r in range(row, row + size):
+                if self.grid[r][col] == SHIP:
+                    return False
+
+        return True
         
     
