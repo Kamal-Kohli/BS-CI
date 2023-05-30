@@ -159,6 +159,7 @@ def play_game():  # Function to start game
     player_turn = True
     # Function to play turn to Player and Cpu
     while True:
+        print('Welcome to BattleShips')
         if player_turn:
             print('Player Grid:')
             player_grid.print_grid(hide_ships=False)
