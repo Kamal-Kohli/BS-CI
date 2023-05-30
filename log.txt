@@ -1,0 +1,63 @@
+-----> Building on the Heroku-22 stack
+-----> Using buildpacks:
+       1. heroku/python
+       2. heroku/nodejs
+-----> Python app detected
+-----> No Python version was specified. Using the buildpack default: python-3.11.3
+       To use a different version, see: https://devcenter.heroku.com/articles/python-runtimes
+-----> Installing python-3.11.3
+-----> Installing pip 23.1.2, setuptools 67.7.2 and wheel 0.40.0
+-----> Installing SQLite3
+-----> Installing requirements with pip
+       Collecting blinker==1.4 (from -r requirements.txt (line 1))
+         Downloading blinker-1.4.tar.gz (111 kB)
+         Preparing metadata (setup.py): started
+         Preparing metadata (setup.py): finished with status 'done'
+       Collecting cryptography==3.4.8 (from -r requirements.txt (line 2))
+         Downloading cryptography-3.4.8-cp36-abi3-manylinux_2_24_x86_64.whl (3.0 MB)
+       Collecting dbus-python==1.2.18 (from -r requirements.txt (line 3))
+         Downloading dbus-python-1.2.18.tar.gz (578 kB)
+         Preparing metadata (setup.py): started
+         Preparing metadata (setup.py): finished with status 'done'
+       Collecting distro==1.7.0 (from -r requirements.txt (line 4))
+         Downloading distro-1.7.0-py3-none-any.whl (20 kB)
+       Collecting httplib2==0.20.2 (from -r requirements.txt (line 5))
+         Downloading httplib2-0.20.2-py3-none-any.whl (96 kB)
+       Collecting importlib-metadata==4.6.4 (from -r requirements.txt (line 6))
+         Downloading importlib_metadata-4.6.4-py3-none-any.whl (17 kB)
+       Collecting jeepney==0.7.1 (from -r requirements.txt (line 7))
+         Downloading jeepney-0.7.1-py3-none-any.whl (54 kB)
+       Collecting keyring==23.5.0 (from -r requirements.txt (line 8))
+         Downloading keyring-23.5.0-py3-none-any.whl (33 kB)
+       Collecting launchpadlib==1.10.16 (from -r requirements.txt (line 9))
+         Downloading launchpadlib-1.10.16-py2.py3-none-any.whl (216 kB)
+       Collecting lazr.restfulclient==0.14.4 (from -r requirements.txt (line 10))
+         Downloading lazr.restfulclient-0.14.4.tar.gz (62 kB)
+         Preparing metadata (setup.py): started
+         Preparing metadata (setup.py): finished with status 'done'
+       Collecting lazr.uri==1.0.6 (from -r requirements.txt (line 11))
+         Downloading lazr.uri-1.0.6.tar.gz (18 kB)
+         Preparing metadata (setup.py): started
+         Preparing metadata (setup.py): finished with status 'done'
+       Collecting more-itertools==8.10.0 (from -r requirements.txt (line 12))
+         Downloading more_itertools-8.10.0-py3-none-any.whl (51 kB)
+       Collecting oauthlib==3.2.0 (from -r requirements.txt (line 13))
+         Downloading oauthlib-3.2.0-py3-none-any.whl (151 kB)
+       Collecting Pygments==2.11.2 (from -r requirements.txt (line 14))
+         Downloading Pygments-2.11.2-py3-none-any.whl (1.1 MB)
+       Collecting PyGObject==3.42.1 (from -r requirements.txt (line 15))
+         Downloading PyGObject-3.42.1.tar.gz (718 kB)
+         Installing build dependencies: started
+         Installing build dependencies: finished with status 'done'
+         Getting requirements to build wheel: started
+         Getting requirements to build wheel: finished with status 'done'
+         Preparing metadata (pyproject.toml): started
+         Preparing metadata (pyproject.toml): finished with status 'done'
+       Collecting PyJWT==2.3.0 (from -r requirements.txt (line 16))
+         Downloading PyJWT-2.3.0-py3-none-any.whl (16 kB)
+       Collecting pyparsing==2.4.7 (from -r requirements.txt (line 17))
+         Downloading pyparsing-2.4.7-py2.py3-none-any.whl (67 kB)
+       ERROR: Could not find a version that satisfies the requirement python-apt==2.4.0 (from versions: 0.0.0, 0.7.8)
+       ERROR: No matching distribution found for python-apt==2.4.0
+ !     Push rejected, failed to compile Python app.
+ !     Push failed
