@@ -24,22 +24,24 @@ HIT = 'X'
 MISS = 'O'
 GRID_SIZE = 10 # Numbr of ships each grid
 SHIPS = [5, 4, 3, 3, 2] # Variation sizes of ships
-
-# Player variables
-player_alive = 17 
-player_radar = []
-player_board = []
-
-# CPU variables
-cpu_alive = 17
-cpu_radar = []
-cpu_board = []
-ship_position = [] 
-ship_length = [] 
+NUM_SHIPS = len(SHIPS)
 
 # Function to create an empty grid
 class Grid:
     def __init__(self):
         self.grid = [[EMPTY] * GRID_SIZE for _ in range(GRID_SIZE)]
         self.ships = []
+    # Function to randomly place ships on the grid
+    def place_ships(self):
+        for size in SHIPS:
+            ship_placed = False
+            while not ship_placed:
+                row = random.randint(0, GRID_SIZE - 1)
+                col = random.randint(0, GRID_SIZE - 1)
+                direction = random.choice(['horizontal', 'vertical'])
+
+                if self.can_place_ship(row, col, size, direction):
+                    self.add_ship(row, col, size, direction)
+                    ship_placed = True
+        
     
