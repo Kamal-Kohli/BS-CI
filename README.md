@@ -2,16 +2,17 @@
 This is a simple implementation of the classic Battleship game in Python. The game is played on the command line interface and allows two players to take turns guessing the locations of each other's ships.
 
 ## USER EXPERIENCE - UX
-+ [Instructions](#rules "Instructions")
++ [Instructions](#instructions "Instructions")
 + [Rules](#rules "Rules")
-+ [Wireframes](#wireframes "Wireframes")
-+ [Features](#features "Features")
-+ [Technologies used](#technologies-used "Technologies used")
-+ [Editor](#editor "Editor")
++ [Design](#design "Design")
++ [Customization](#customization "Customization")
++ [Code Structure](#code-structure "Code Structure")
 + [Unfixed bugs](#unfixed-bugs "Unfixed bugs")
++ [Editor](#editor "Editor")
 + [Testing](#testing "Testing")
 + [Deployment](#deployment "Deployment")
 + [Credits](#credits "Credits")
++ [Acknowledgments](#acknowledgments "Acknowledgments")
 
 ## Instructions
 - Clone the repository or click on [Heroku](https://battleship-game-ci.herokuapp.com/) deplyed link.
@@ -55,11 +56,16 @@ If you wish to customize the game, you can modify the following parameters in th
 ![Start](/assets/images/play.png)
 ![Play](/assets/images/game.png)
 
-## Unfix bugs
+## Unfixed bugs
 I try to fix it my pep8 test, but still unfix bugs existing. In future I will try to fix them all. I asked support to slack but still it's not resolved. 
 ![pep8](/assets/images/pep8-test.png)
 
-## 
+## Editor
+ - ### Gitpod/Codeanywhere: A cloud-based integrated development environment (IDE) that was used for version control and writing code. The Gitpod terminal was utilized to commit changes to Git and push them to GitHub.
+
+ - ### GitHub: A web-based hosting service used for version control and storing the project's code after being pushed from Gitpod.
+
+ - ### Heroku: Heroku app is a cloud platform as a service supporting several programming languages. Heroku app builds an app for out game, if you don't know the programming this is the option where users can play the battleship game easily. 
 
 ## Deployment
 We use Heroku app to deployed our Battleship game. Repository save into Github.
@@ -74,6 +80,8 @@ Coordinates are also easy to understand, as long as you enjoy playing the alphab
 ## Credits 
 Thank you to Coders on Youtube.com and stackoverflow.com for helping me to understand the game code. I learned how to implement the game code and run it. 
 Also credits goes to our tutor suppport, I was facing problem in deployment, they help me out from this. Thank you all supprt team.
+
+flaticon.com for favicon
 
 ## Acknowledgments
 This Battleship game implementation is inspired by various online resources and tutorials.
