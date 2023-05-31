@@ -2,7 +2,7 @@
 This is a simple implementation of the classic Battleship game in Python. The game is played on the command line interface and allows two players to take turns guessing the locations of each other's ships.
 
 ## USER EXPERIENCE - UX
-+ [Rules](#rules "Rules")
++ [Instructions](#rules "Instructions")
 + [Rules](#rules "Rules")
 + [Wireframes](#wireframes "Wireframes")
 + [Features](#features "Features")
@@ -59,5 +59,23 @@ If you wish to customize the game, you can modify the following parameters in th
 I try to fix it my pep8 test, but still unfix bugs existing. In future I will try to fix them all. I asked support to slack but still it's not resolved. 
 ![pep8](/assets/images/pep8-test.png)
 
+## 
 
+## Deployment
+We use Heroku app to deployed our Battleship game. Repository save into Github.
 
+Github: [Repository](https://github.com/Kamal-Kohli/BS-CI)
+Heroku App: [Live Game App](https://battleship-game-ci.herokuapp.com/)
+
+## Testing
+As per the review given by the users, the game takes a little longer time but does not face any problem in playing it.
+Coordinates are also easy to understand, as long as you enjoy playing the alphabet and numbers game.
+
+## Credits 
+Thank you to Coders on Youtube.com and stackoverflow.com for helping me to understand the game code. I learned how to implement the game code and run it. 
+Also credits goes to our tutor suppport, I was facing problem in deployment, they help me out from this. Thank you all supprt team.
+
+## Acknowledgments
+This Battleship game implementation is inspired by various online resources and tutorials.
+
+Enjoy the game!
