@@ -1,5 +1,6 @@
 # BS-CI
 This is a simple implementation of the classic Battleship game in Python. The game is played on the command line interface and allows two players to take turns guessing the locations of each other's ships.
+![Game layout on devices](/assets/images/Device-layout.png)
 
 ## USER EXPERIENCE - UX
 + [Instructions](#instructions "Instructions")
@@ -69,6 +70,14 @@ I try to fix it my pep8 test, but still unfix bugs existing. In future I will tr
 
 ## Deployment
 We use Heroku app to deployed our Battleship game. Repository save into Github.
+
+This project was deployed using Code Institute's mock terminal for Heroku.
+- Steps
+1. Fork or clone this repository
+2. Create a new Heroku app
+3. Set the buildbacks to Python and NodeJs in that order
+4. Link the Heroku app to the repository
+5. Click on Manual Deploy
 
 Github: [Repository](https://github.com/Kamal-Kohli/BS-CI)
 Heroku App: [Live Game App](https://battleship-game-ci.herokuapp.com/)
