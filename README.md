@@ -29,3 +29,18 @@ This is a simple implementation of the classic Battleship game in Python. The ga
 4. The game indicates whether a ship was hit or missed.
 5. If a ship is hit in all its cells, it is considered sunk.
 6. The game ends when all the ships of one player are sunk.
+
+## Design
+Interface of BattleShip Game
+![Game-Interface](/assets/images/game-interface.png)
+
+## Customization
+If you wish to customize the game, you can modify the following parameters in the `run.py` file:
+- GRID_SIZE: Specifies the size of the game board. By default, it is set to 10x10.
+- NUM_SHIPS: Specifies the number of ships each player has. By default, it is set to 5.
+- SHIP: Specifies the lengths of the ships. By default, it is set to [5, 4, 3, 3, 2]. You can modify this list to create ships of different lengths.
+
+## Unfix bugs
+I try to fix it my pep8 test, but still unfix bugs existing. In future I will try to fix them all. I asked support to slack but still it's not resolved. 
+![pep8](/assets/images/pep8-test.png)
+
